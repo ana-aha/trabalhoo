@@ -4,13 +4,13 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8" />
-        <title>Livros</title>
+        <title>Jogos</title>
         <link href="/css/bootstrap.min.css" rel="stylesheet" />
     </head>
     <body>
         <div class="container">
-            <h1>Livros</h1>
-            <a href="/livros/insert" class="btn btn-primary">Novo Livro</a>
+            <h1>Jogos</h1>
+            <a href="/jogos/insert" class="btn btn-primary">Novo Livro</a>
             <table class="table">
                 <tr>
                     <th>Id</th>
@@ -18,14 +18,14 @@
                     <th>Gênero</th>
                     <th>&nbsp;</th>
                 </tr>
-                <c:forEach var="item" items="${livros}">
+                <c:forEach var="item" items="${jogos}">
                     <tr>
                         <td>${item.id}</td>
                         <td>${item.titulo}</td>
                         <td>${item.genero.nome}</td>
                         <td>
-                            <a href="/livros/update?id=${item.id}" class="btn btn-secondary">Editar</a>
-                            <a href="/livros/delete?id=${item.id}" class="btn btn-danger">Excluir</a>
+                            <a href="/jogos/update?id=${item.id}" class="btn btn-secondary">Editar</a>
+                            <a href="/jogos/delete?id=${item.id}" class="btn btn-danger">Excluir</a>
                         </td>
                     </tr>
                 </c:forEach>
